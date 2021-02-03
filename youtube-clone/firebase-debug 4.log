@@ -1,0 +1,41 @@
+[debug] [2020-12-23T03:04:57.736Z] ----------------------------------------------------------------------
+[debug] [2020-12-23T03:04:57.738Z] Command:       /usr/local/bin/node /usr/local/bin/firebase deploy
+[debug] [2020-12-23T03:04:57.738Z] CLI Version:   8.18.1
+[debug] [2020-12-23T03:04:57.738Z] Platform:      darwin
+[debug] [2020-12-23T03:04:57.738Z] Node Version:  v14.15.1
+[debug] [2020-12-23T03:04:57.739Z] Time:          Wed Dec 23 2020 12:04:57 GMT+0900 (Korean Standard Time)
+[debug] [2020-12-23T03:04:57.740Z] ----------------------------------------------------------------------
+[debug] [2020-12-23T03:04:57.740Z] 
+[debug] [2020-12-23T03:04:57.749Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-12-23T03:04:57.750Z] > authorizing via signed-in user
+[debug] [2020-12-23T03:04:57.750Z] [iam] checking project clone-4732b for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2020-12-23T03:04:57.753Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/clone-4732b:testIamPermissions  
+ {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2020-12-23T03:04:58.949Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Wed, 23 Dec 2020 03:04:58 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=566","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-12-23T03:04:58.951Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/clone-4732b  
+ 
+[debug] [2020-12-23T03:04:59.841Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Wed, 23 Dec 2020 03:04:59 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] 
+[info] === Deploying to 'clone-4732b'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2020-12-23T03:04:59.845Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/clone-4732b/versions  
+ {"config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2020-12-23T03:05:01.322Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Wed, 23 Dec 2020 03:05:01 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] i  hosting[clone-4732b]: beginning deploy... 
+[info] i  hosting[clone-4732b]: found 18 files in build 
+[debug] [2020-12-23T03:05:01.336Z] [hosting] hash cache [YnVpbGQ] not populated
+[debug] [2020-12-23T03:05:01.509Z] > refreshing access token with scopes: []
+[debug] [2020-12-23T03:05:01.509Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2020-12-23T03:05:01.511Z] [hosting] hash cache [YnVpbGQ] stored for 18 files
+[debug] [2020-12-23T03:05:01.512Z] [hosting][hash queue][FINAL] {"max":165,"min":21,"avg":32.22222222222222,"active":0,"complete":18,"success":18,"errored":0,"retried":0,"total":18,"elapsed":175}
+[debug] [2020-12-23T03:05:01.731Z] <<< HTTP RESPONSE 200 {"expires":"Mon, 01 Jan 1990 00:00:00 GMT","pragma":"no-cache","cache-control":"no-cache, no-store, max-age=0, must-revalidate","date":"Wed, 23 Dec 2020 03:05:01 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-12-23T03:05:01.754Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/sites/clone-4732b/versions/42379b415ce052bc:populateFiles [none]
+[debug] [2020-12-23T03:05:01.754Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/sites/clone-4732b/versions/42379b415ce052bc:populateFiles {"files":{"/asset-manifest.json":"d451a5edd1d03af318a6b0969afa80c1f6293cac208576170b6f5d83e23e9abd","/index.html":"1713b65336d13cb8fc9d12251c99f3c8143d0fbb902742c05a9b4569efc6ed6a","/manifest.json":"341d52628782f8ac9290bbfc43298afccb47b7cbfcee146ae30cf0f46bc30900","/logo512.png":"191fc21360b4ccfb1cda11a1efb97f489ed22672ca83f4064316802bbfdd750e","/robots.txt":"391d14b3c2f8c9143a27a28c7399585142228d4d1bdbe2c87ac946de411fa9a2","/static/css/main.8d0d60dc.chunk.css":"78c22b1e611019851ffedab4d7f5c8776bcae108a9ace3e6e5549f2c34a44638","/static/css/main.8d0d60dc.chunk.css.map":"f543e74a645f36c47bc406fa649214c446a5ccd1bc10c69fbf922218d6cacf40","/static/js/2.dfd9a822.chunk.js.LICENSE.txt":"6639c327727c493e3f66a10c5de392a142a828f15deaa64e818b8db87b30eab2","/static/js/3.aff368b6.chunk.js":"75f10fcc317324f4110ff33d36f68fe1a302dc6608a9e180c9e172f8011897b7","/static/js/3.aff368b6.chunk.js.map":"b9ad79196ca2e51a197a7572f52fb5bf79d7c94247c18d74deaa6dc372959cac","/static/js/main.064f93a4.chunk.js.map":"ff447d00155fca0f5adee32daeffdb9176be54c51bbb62f760c287ebc2609314","/static/js/runtime-main.70c2f917.js":"871ec6096531424c79f033f7ac27a323861c62277ced808c17171fc71ae6a232","/static/js/runtime-main.70c2f917.js.map":"e10908bd8736190e41203ef2406700b0f2f94e5b57f43bb510f767780942e514","/logo192.png":"caff018b7f1e8fd481eb1c50d75b0ef236bcd5078b1d15c8bb348453fee30293","/static/js/main.064f93a4.chunk.js":"0a341df8c3a3645d334e53c7fb9a23f25ac8792e32f970ebd64bb57ecc14c901","/favicon.ico":"b72f7455f00e4e58792d2bca892abb068e2213838c0316d6b7a0d6d16acd1955","/static/js/2.dfd9a822.chunk.js":"dd33a10405ba0f7c39d2c8d7b82a259e2b8d4b0e0a1d6c4440afec447612bd38","/static/js/2.dfd9a822.chunk.js.map":"36a2960f0ceec246040d3bffc2633ae62b02e882f3c9ab29bb0510398b3081d4"}}
+[debug] [2020-12-23T03:05:02.904Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/sites/clone-4732b/versions/42379b415ce052bc:populateFiles 200
+[debug] [2020-12-23T03:05:02.904Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/sites/clone-4732b/versions/42379b415ce052bc:populateFiles {"uploadRequiredHashes":["1713b65336d13cb8fc9d12251c99f3c8143d0fbb902742c05a9b4569efc6ed6a"],"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/clone-4732b/versions/42379b415ce052bc/files"}
+[debug] [2020-12-23T03:05:02.905Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/clone-4732b/versions/42379b415ce052bc/files/1713b65336d13cb8fc9d12251c99f3c8143d0fbb902742c05a9b4569efc6ed6a [none]
+[debug] [2020-12-23T03:05:02.905Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/clone-4732b/versions/42379b415ce052bc/files/1713b65336d13cb8fc9d12251c99f3c8143d0fbb902742c05a9b4569efc6ed6a [stream]
+[debug] [2020-12-23T03:05:02.907Z] [hosting][populate queue][FINAL] {"max":1397,"min":1397,"avg":1397,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":1399}
+[debug] [2020-12-23T03:05:02.907Z] [hosting] uploads queued: 1
